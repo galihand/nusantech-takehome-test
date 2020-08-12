@@ -1,5 +1,5 @@
 function Zigzag(s) {
-  if ((s + 1) % 4 != 0 || s < 0)  // cek kondisi s = positif && S = 4n - 1 (n adalah positif integer)
+  if ((s + 1) % 4 != 0 || s < 0)  // cek kondisi s = positif dan s = 4n - 1 (n adalah positif integer)
     return 'Error: S harus bilangan positif dan S harus dapat dinyatakan dalam 4n - 1'
   
   let maze = '' // membuat container
@@ -12,8 +12,7 @@ function Zigzag(s) {
       }
       else maze += ' ' // membuat jalan
     }
-    maze += '@' // bangun tembok paling kanan
-    maze += '\n' // agar pindah ke jalur selanjutnya
+    maze += '@\n' // bangun tembok paling kanan dan pindah ke jalur berikutnya
   }
   return maze
 }
